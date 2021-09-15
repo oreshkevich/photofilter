@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>photofilter</title>
+</head>
+  <h2>Photo Filter <span class='hl'>JS</span></h2>
+  <div class="container">
+    <div class="controls">
+      <label for="spacing">
+        Spacing:
+        <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px" class="ss">
+        <output name="result" class="cc">0</output>
+      </label>
+      <label>
+        Blur:
+        <input name="blur" data-sizing="px" type="range" min="0" max="10" value="0" class="xxx" />
+        <output name="result" class="yyy">0</output>
+      </label>
+      <label>
+        Invert:
+        <input name="invert" data-sizing="%" type="range" min="0" max="100" value="0" class="x" />
+        <output name="result" class="y">0</output>
+      </label>
+      <label>
+        Sepia:
+        <input name="sepia" data-sizing="%" type="range" min="0" max="100" value="0" class="xx" />
+        <output name="result" class="yy">0</output>
+      </label>
+      <label>
+        Saturate:
+        <input name="saturate" data-sizing="%" type="range" min="0" max="200" class="xxxx" value="100" />
+        <output name="result" class="yyyy">100</output>
+      </label>
+      <label>
+        Hue rotate:
+        <input name="hue" data-sizing="deg" type="range" min="0" max="360" value="0" class="xxxxx" />
+        <output name="result" class="yyyyy">0</output>
+      </label>
+
+      <label for="base">
+        Base Color
+        <input id="base" type="color" name="base" value="#8bf089">
+      </label>
+      <button class="btn btn-reset" value="Reset">Reset</button>
+      <button class="btn btn-next btn-active">Next picture</button>
+      <label class="btn btn-load" for="btnInput">
+        Load picture
+        <input class="btn-load--input" id="btnInput" name="upload" type="file" placeholder="Load picture" />
+      </label>
+     
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="image-container">
+      <img class="photo" id='myImage' src="assets/img/img.jpg" alt="image" />
+    </div>
+    <div class="specify">
+      <div class="specify-element">
+        <img id='btn-n' class="specify-img" style="filter: invert(0%) hue-rotate(0deg) saturate(0%) sepia(0%);" src="assets/img/img.jpg" alt="normal" />
+        <p class="specify-title">nall</p>
+      </div>
+
+      <div class="specify-element">
+        <img id='btn' class="specify-img" style="filter: saturate(200%);" src="assets/img/img.jpg" alt="Saturate" />
+        <p class="specify-title">Saturate: 200</p>
+      </div>
+
+      <div class="specify-element">
+        <img id='btn-2' class="specify-img" style="filter: invert(100%);" src="assets/img/img.jpg" alt="Invert" />
+        <p class="specify-title">Invert: 100</p>
+      </div>
+
+      <div class="specify-element">
+        <img id='btn-3' class="specify-img" style="filter: sepia(100%);" src="assets/img/img.jpg" alt="Sepia" />
+        <p class="specify-title">Sepia: 100</p>
+      </div>
+
+      <div  class="specify-element">
+        <img id='btn-4' class="specify-img" style="filter: saturate(200%) hue-rotate(170deg)" src="assets/img/img.jpg" alt="Brannan" />
+        <p class="specify-title">Saturate: 200 Hue: 170</p>
+      </div>
+
+    </div>
+  </div>
+  <script src="./script.js"></script>
+
+  </body>
+
+</html>
